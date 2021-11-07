@@ -3,7 +3,6 @@
     float:left;
     width: 60%;
     padding:0 0 0 30px;
-    background: chartreuse;
     height: 100%;
 }
 .sidebar
@@ -16,10 +15,15 @@
 }
 h1{
     text-align: center;
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid blanchedalmond;
     padding: 0 0 10px 0;
 }
+#date{
+    color: yellow;
+    font-size: 12px;
+    font-style: italic;
+}
 body{
-    background: wheat;
+    background: red;
     color: white;
 }

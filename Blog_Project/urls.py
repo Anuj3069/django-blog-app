@@ -19,5 +19,6 @@ from blog import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', views.post_list_view),
+    path('', views.post_list_view),
+    path('post/<int:year>/<int:month>/<int:day>/<slug:post>/', views.post_detail_view, name='post_detail'),
 ]
