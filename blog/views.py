@@ -22,4 +22,12 @@ def post_detail_view(request,year,month,day,post):
                            publish__year=year,
                            publish__month=month,
                            publish__day=day)
-    return render(request,'blog/post_detail.html',{'post':post})                       
+    return render(request,'blog/post_detail.html',{'post':post})       
+
+from django.core.mail  import send_mail
+from blog.forms import EmailSendForm
+
+def mail_send_view(request,id):
+    post=get_object_or_404(Post,id=id,status='publish')
+    form=EmailSendForm()
+    return render(request,'blog/sharebyemail.html',{'form':form,'post':post}) 
